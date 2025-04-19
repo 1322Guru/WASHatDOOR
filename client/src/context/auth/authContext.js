@@ -1,6 +1,11 @@
 import React, { createContext, useReducer } from 'react';
 import axios from 'axios';
 
+// Create axios instance with base URL
+const api = axios.create({
+  baseURL: process.env.REACT_APP_API_URL || 'https://washatdoor.onrender.com'
+});
+
 export const AuthContext = createContext();
 
 const authReducer = (state, action) => {
@@ -66,7 +71,7 @@ const AuthState = (props) => {
         return;
       }
       
-      const res = await axios.get('/api/auth', {
+      const res = await api.get('/api/auth', {
         headers: {
           'x-auth-token': localStorage.getItem('token'),
         },
@@ -87,7 +92,7 @@ const AuthState = (props) => {
   // Register User
   const register = async (formData) => {
     try {
-      const res = await axios.post('/api/auth/register', formData);
+      const res = await api.post('/api/auth/register', formData);
       dispatch({
         type: 'REGISTER_SUCCESS',
         payload: res.data,
@@ -104,7 +109,7 @@ const AuthState = (props) => {
   // Login User
   const login = async (formData) => {
     try {
-      const res = await axios.post('/api/auth/login', formData);
+      const res = await api.post('/api/auth/login', formData);
       dispatch({
         type: 'LOGIN_SUCCESS',
         payload: res.data,
