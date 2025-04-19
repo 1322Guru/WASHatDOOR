@@ -9,9 +9,9 @@
     "client": "cd client && npm start",
     "dev:full": "concurrently \"npm run dev\" \"npm run client\"",
     "install:all": "npm install && cd client && npm install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run install:all && npm run build",
-    "render-postbuild": "npm run install:all && npm run build"
+    "build": "npm run install:all && cd client && npm run build",
+    "heroku-postbuild": "npm run install:all && cd client && npm run build",
+    "render-postbuild": "npm run install:all && cd client && npm run build"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
