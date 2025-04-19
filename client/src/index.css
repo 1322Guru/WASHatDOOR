@@ -1,0 +1,29 @@
+/* @font-face {
+  font-family: 'CoFo Kabeltouw Stencil 38';
+  src: url('/fonts/CoFoKabeltouwStencil38.woff2') format('woff2'),
+       url('/fonts/CoFoKabeltouwStencil38.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} */
+
+body {
+  margin: 0;
+  font-family: 'ff-nexus-serif', serif;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.washatdoor-text {
+  font-family: 'ff-nexus-serif', serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

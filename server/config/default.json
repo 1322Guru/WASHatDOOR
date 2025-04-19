@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb://localhost:27017/washatdoor",
+  "jwtSecret": "washatdoor_secret_token"
+} 
